@@ -2,7 +2,7 @@ const session = require('express-session')
 const connection = require('../models/db')
 const truncate = require('truncate');
 
-// index page
+
 exports.index = (req, res) => {
     connection.query(
         'SELECT * FROM posts',
@@ -12,7 +12,6 @@ exports.index = (req, res) => {
     );
 }
 
-// login and register
 exports.login = (req, res) => {
     if (req.session.loggedin)
     {
@@ -23,7 +22,6 @@ exports.login = (req, res) => {
 }
 
 
-// admin edit blog post
 exports.edit = (req, res) => {
     if (req.session.loggedin) {
         connection.query(
@@ -36,7 +34,7 @@ exports.edit = (req, res) => {
     }
 }
 
-// Update method for /edit page
+
 exports.update = (req, res) => {
     if (req.session.loggedin) {
         connection.query(
@@ -49,7 +47,7 @@ exports.update = (req, res) => {
     }
 }
 
-// delete
+
 exports.delete = (req, res) => {
     if (req.session.loggedin) {
         connection.query(
@@ -64,7 +62,7 @@ exports.delete = (req, res) => {
     }
 }
 
-// new blog (get)
+
 exports.new_get = (req, res) => {
     
     if(req.session.loggedin) {
@@ -74,7 +72,7 @@ exports.new_get = (req, res) => {
     }
 }
 
-// new blog (post)
+
 exports.new_post = (req, res) => {
     connection.query(
         'INSERT INTO posts(title, content, post_date) VALUES(?, ?, NOW())',
@@ -85,7 +83,7 @@ exports.new_post = (req, res) => {
     );
 }
 
-// viewing the post
+
 exports.post = (req, res) => {
     connection.query(
         'SELECT * FROM posts WHERE id = ?',

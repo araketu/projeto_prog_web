@@ -1,22 +1,21 @@
 const express = require('express')
 const router = express.Router();
 
-// the indexController
+
 const indexController = require('../controllers/index')
 
-// indexing methods
+
 router.get('/', indexController.index);
 
 
-// login and register methods
+
 router.get('/login', indexController.login);
 
-// administration pages
-// Edit page
+
 router.get('/edit/:id', indexController.edit);
 router.post('/update/:id', indexController.update);
 
-// Delete
+
 router.get('/delete/:id' , indexController.delete);
 
 
