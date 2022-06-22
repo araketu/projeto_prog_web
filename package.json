@@ -1,12 +1,12 @@
 {
-  "name": "webtest",
+  "name": "flogao",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
     "start": "node ./node_modules/nodemon/bin/nodemon.js app.js"
   },
-  "author": "JustPowerful",
+  "author": "araketu",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.8",
