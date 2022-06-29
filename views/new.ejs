@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>New post</title>
+        <title>Nova publicação</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -27,7 +27,7 @@
                  <textarea class="form-control" name="content" rows="3" id="contentarea" required></textarea>
                  <p><span id="lblcount">0</span>/3000</p>
                 <br> <br>
-                <input type="submit" value="Submit" class="btn btn-dark">
+                <input type="submit" value="Publicar" class="btn btn-dark">
             </form>
 
             <br>
@@ -50,7 +50,7 @@
                             len = this.value.length,
                             lbl = $('#lblcount');
                         if(len >= max) {
-                            lbl.text(' you have reached the limit')
+                            lbl.text(' Limite de linhas atingido')
                             .addClass("lblCountRed").removeClass('lblCountGreen');
                         } else {
                             var ch = len;

@@ -27,7 +27,7 @@
                  <textarea class="form-control" name="content" rows="3" id="contentarea" required><%= post.content %></textarea>
                  <p><span id="lblcount">0</span>/3000</p>
                  <br> <br>
-                <input type="submit" value="Update" class="btn btn-dark">
+                <input type="submit" value="Salvar" class="btn btn-dark">
             </form>
 
 
@@ -57,7 +57,7 @@
                             len = this.value.length,
                             lbl = $('#lblcount');
                         if(len >= max) {
-                            lbl.text(' you have reached the limit')
+                            lbl.text(' Número de linhas maior que o permitido')
                             .addClass("lblCountRed").removeClass('lblCountGreen');
                         } else {
                             var ch = len;
