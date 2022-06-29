@@ -56,10 +56,14 @@ npm start
 ```
 
 
+
 # Notas
 
-- [x] Projeto ainda em desenvolvimento.
-
+- [x] Projeto ainda em desenvolvimento
+- [x] Usuário Padrão: "test"
+- [x] Senha Padrão: "test"
+- [x] Prints e Templates na pasta Imagens na raiz do projeto
+- [x] Video Funcionamento na pasta Video
 
 # Informações adicionais
 
